@@ -1,0 +1,54 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+h1{
+    cursor: pointer;
+    font-size: 100px;
+    font-weight: 800;
+    position: relative;
+}
+h1::after{
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 10px;
+    bottom: 0;
+    background-color: black;
+    left: 0;
+    
+    animation-direction: alternate;
+}
+
+h1:hover::after{
+    animation-name: linean;
+    animation-duration: 2s;
+}
+
+@keyframes linean {
+    0%{
+        width: 0;
+        left: 0;
+    }
+    50%{
+        width: 100%;
+        left: 0;
+    }
+    100%{
+        width: 0;
+        left: 100%;
+    }
+    
+}
